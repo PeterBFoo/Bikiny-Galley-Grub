@@ -1,5 +1,6 @@
 package edu.poniperro.receipt;
 
+import edu.poniperro.extras.Prices;
 import org.junit.Assert;
 import org.junit.Test;
 

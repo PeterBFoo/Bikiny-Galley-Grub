@@ -1,4 +1,4 @@
-package edu.poniperro.receipt;
+package edu.poniperro.extras;
 
 import java.util.HashMap;
 import java.util.Map;
