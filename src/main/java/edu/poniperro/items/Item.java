@@ -29,15 +29,12 @@ public class Item implements Product {
     }
 
     public Boolean isRegular() {
-        if (extra == null) {
-            return false;
-        }
-        return true;
+        return extra != null;
     }
 
     @Override
     public String toString() {
-        return name() + "...." + price() + "$";
+        return name() + "...." + String.format("%.2f", price()) + "$";
     }
 
     @Override
