@@ -1,5 +1,7 @@
 package edu.poniperro.items;
 
+import edu.poniperro.extras.Prices;
+
 public class Item implements Product {
     String name;
     Double price;
@@ -34,7 +36,10 @@ public class Item implements Product {
 
     @Override
     public String toString() {
-        return name() + "...." + String.format("%.2f", price()) + "$";
+        if (!isRegular()) {
+            return name() + "...." + String.format("%.2f", price()) + "$";
+        }
+        return name() + " w/ " + extra + "...." + String.format("%.2f", price()) + "$ + " + String.format("%.2f", Prices.getExtras().get(extra)) + "$";
     }
 
     @Override
