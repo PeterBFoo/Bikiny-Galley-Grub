@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Order implements Comanda {
     private final List<Item> itemList = new ArrayList<>();
-    private Double total;
+    private Double total = 0d;
 
     public Order(){}
 
