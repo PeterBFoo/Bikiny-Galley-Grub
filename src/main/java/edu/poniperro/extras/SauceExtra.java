@@ -5,7 +5,17 @@ import edu.poniperro.order.Comanda;
 import edu.poniperro.receipt.Prices;
 
 public class SauceExtra extends Extra {
-    private final Double SAUCE_PRICE = Prices.getExtras().get(SAUCE);
+    private Double SAUCE_PRICE;
+
+    public SauceExtra() {
+        this.extraProduct = SAUCE;
+
+        if (Prices.getExtras().get(SAUCE) == null) {
+            Prices.init_prices();
+        }
+
+        this.SAUCE_PRICE = Prices.getExtras().get(SAUCE);
+    }
 
     @Override
     public void sumExtras(Comanda comanda) {

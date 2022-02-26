@@ -8,7 +8,7 @@ public class CheeseExtra extends Extra {
     private Double CHEESE_PRICE;
 
     public CheeseExtra() {
-        this.extraProduct = "cheese";
+        this.extraProduct = CHEESE;
 
         if (Prices.getExtras().get(CHEESE) == null) {
             Prices.init_prices();
