@@ -12,8 +12,6 @@ The owner, Eugene H. Krabs instead of buying a TPV, has decided to contract a Du
 
 Try to act programing if you don't want to end in the kitchen helping Bob to cook Krusty Burguers.
 
-Intenta hacer como que programas si no quieres terminar en la cocina ayudando a Bob a preparar Krusty Burguers.
-
 Implement the user's history with the logic written in the main class App.java.
 
 ### Class Diagram
