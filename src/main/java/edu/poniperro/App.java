@@ -1,6 +1,13 @@
 package edu.poniperro;
 
+import edu.poniperro.extras.*;
+import edu.poniperro.items.Item;
+import edu.poniperro.items.Product;
+import edu.poniperro.order.Comanda;
+import edu.poniperro.order.Order;
 import edu.poniperro.receipt.Prices;
+import edu.poniperro.receipt.Ticket;
+import edu.poniperro.receipt.Receipt;
 
 /**
  *
@@ -58,7 +65,7 @@ public class App
          * Incluye los metodos sobrescritos
          * equals y hascode para comparar objetos
          * de tipo Item.
-         *
+         */
 
         System.out.print("\n\t --- GALLEY GRUB ---  \n");
 
@@ -98,7 +105,7 @@ public class App
          * Cuando solicitas crear de nuevo ese Item
          * te devuelve la misma referencia al objeto que has creado antes,
          * ahorrando asi memoria.
-         *
+         */
 
         Comanda order = new Order();
 
@@ -114,7 +121,7 @@ public class App
          * Squidward Tentacles genera el recibo,
          * la app calcula el importe total de la comanda
          * y lo muestra en pantalla.
-         *
+         */
 
         Ticket receipt = new Receipt(order);
         receipt.total();
@@ -133,7 +140,7 @@ public class App
          * NO ACTUALICES EL PRECIO DEL ITEM
          * con el cargo extra
          * pues eso lo haremos con otro componente.
-         *
+         */
 
         System.out.print("\n\t --- GALLEY GRUB ---  \n");
 
@@ -152,7 +159,7 @@ public class App
          * Buble Fish sigue zampando
          * y realiza una comanda cargada
          * de extras.
-         *
+         */
 
         order = new Order();
 
@@ -184,7 +191,7 @@ public class App
          * total de Order (la comanda).
          *
          * El precio total de la comanda se guarda en Order.
-         *
+         */
 
         Extra regular = new Regular(); // suma el precio base
         Extra cheese = new CheeseExtra(); // suma el precio del extra cheese
@@ -199,19 +206,18 @@ public class App
          * Squidward Tentacles genera el recibo,
          * la app calcula el importe total de la comanda
          * y lo muestra en pantalla.
-         *
+         */
 
-        System.out.print("\n\t --- PRINTIG RECEIPT BIPBIPBIP ---  \n");
+        System.out.print("\n\t --- PRINTING RECEIPT BIPBIPBIP ---  \n");
 
         Ticket receiptExtra = new Receipt(order);
         receiptExtra.setChain(regular);
 
         receiptExtra.total();
-        receiptExtra.print();*
+        receiptExtra.print();
     }
 
     public static void display(Product item) {
         System.out.print("\t" + item.toString() + "\n");
-    }*/
     }
 }
