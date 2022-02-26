@@ -88,7 +88,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>org.example.${main.class}</mainClass>
+                                <mainClass>edu.poniperro.${main.class}</mainClass>
                                 <!-- https://maven.apache.org/shared/maven-archiver/examples/manifest.html -->
                                 <!-- addDefaultImplementationEntries bool -->
                                 <!-- addDefaultSpecificationEntries bool -->
