@@ -1,6 +1,6 @@
 package edu.poniperro.items;
 
-import edu.poniperro.extras.Prices;
+import edu.poniperro.receipt.Prices;
 
 public class Item implements Product {
     String name;
@@ -27,7 +27,7 @@ public class Item implements Product {
     }
 
     public String extra() {
-        return  this.extra;
+        return this.extra;
     }
 
     public Boolean isRegular() {

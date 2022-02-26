@@ -1,4 +1,4 @@
-package edu.poniperro.extras;
+package edu.poniperro.receipt;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,10 +7,10 @@ public class Prices {
     private static final Map<String, Double> extras = new HashMap<>();
 
     public static void init_prices() {
-        extras.put("cheese", 0.25);
-        extras.put("sauce", 0.5);
-        extras.put("medium", 0.25);
-        extras.put("large", 0.5);
+        extras.putIfAbsent("cheese", 0.25);
+        extras.putIfAbsent("sauce", 0.5);
+        extras.putIfAbsent("medium", 0.25);
+        extras.putIfAbsent("large", 0.5);
     }
 
     public static void display() {
