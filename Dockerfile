@@ -8,7 +8,7 @@ RUN mvn -f /home/app/pom.xml clean package -q
 
 FROM openjdk:11.0-jre-slim-buster
 
-LABEL "org.example.Bikiny-Galley-Grub"="Bikiny-Galley-Grub"
+LABEL "edu.poniperro.Bikiny-Galley-Grub"="Bikiny-Galley-Grub"
 LABEL version=1.0-SNAPSHOT
 LABEL mantainer="pborrasexposito@cifpfbmoll.eu"
 
