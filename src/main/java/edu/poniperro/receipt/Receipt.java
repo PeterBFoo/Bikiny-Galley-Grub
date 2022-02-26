@@ -1,6 +1,7 @@
 package edu.poniperro.receipt;
 
-import edu.poniperro.extras.*;
+import edu.poniperro.extras.Extra;
+import edu.poniperro.extras.Regular;
 import edu.poniperro.items.Item;
 import edu.poniperro.order.Comanda;
 
@@ -37,14 +38,6 @@ public class Receipt implements Ticket {
     public void sumExtrasCharge() {
         if (firstExtra == null) {
             Regular regular = new Regular();
-            Extra cheese = new CheeseExtra();
-            Extra sauce = new SauceExtra();
-            Extra size = new SizeLargeExtra();
-
-            regular.setNextExtra(cheese);
-            cheese.setNextExtra(sauce);
-            sauce.setNextExtra(size);
-
             setChain(regular);
         }
         firstExtra.sumExtras(this.comanda);
