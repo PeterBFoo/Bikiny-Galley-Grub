@@ -1,6 +1,6 @@
 # Bikiny Galley Grub
 
-Programing exercise in Java, proposed and created by @Dfleta.
+Programing exercise in Java, proposed and created by [@Dfleta](https://github.com/dfleta).
 
 ### Introduction
 
