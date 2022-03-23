@@ -2,25 +2,20 @@ package edu.poniperro.extras;
 
 import edu.poniperro.items.Item;
 import edu.poniperro.order.Comanda;
-import edu.poniperro.receipt.Prices;
+import edu.poniperro.items.Prices;
 
 public class SauceExtra extends Extra {
-    private Double SAUCE_PRICE;
+    private final Double SAUCE_PRICE;
 
     public SauceExtra() {
-        this.extraProduct = SAUCE;
-
-        if (Prices.getExtras().get(SAUCE) == null) {
-            Prices.init_prices();
-        }
-
-        this.SAUCE_PRICE = Prices.getExtras().get(SAUCE);
+        this.extraProduct = Prices.SAUCE.getDomainName();
+        this.SAUCE_PRICE = Prices.SAUCE.getPrice();
     }
 
     @Override
     public void sumExtras(Comanda comanda) {
         for (Item item : comanda.itemList()) {
-            if (item.extra() == SAUCE) {
+            if (item.extra().equals(this.extraProduct)) {
                 comanda.updateTotal(SAUCE_PRICE);
             }
         }
