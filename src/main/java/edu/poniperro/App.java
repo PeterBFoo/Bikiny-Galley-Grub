@@ -5,7 +5,7 @@ import edu.poniperro.items.Item;
 import edu.poniperro.items.Product;
 import edu.poniperro.order.Comanda;
 import edu.poniperro.order.Order;
-import edu.poniperro.receipt.Prices;
+import edu.poniperro.items.Prices;
 import edu.poniperro.receipt.Ticket;
 import edu.poniperro.receipt.Receipt;
 
@@ -45,8 +45,6 @@ public class App
          * Lee los precios de los items en la imagen
          * del menu proporcionada.
          */
-
-        Prices.init_prices();
 
         // formatea la salida de cada entrada del diccionario como prefieras
         System.out.print("\n\t --- PRICES ---  \n");
