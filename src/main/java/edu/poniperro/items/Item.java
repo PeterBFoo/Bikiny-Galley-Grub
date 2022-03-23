@@ -1,7 +1,5 @@
 package edu.poniperro.items;
 
-import edu.poniperro.receipt.Prices;
-
 public class Item implements Product {
     String name;
     Double price;
@@ -15,7 +13,7 @@ public class Item implements Product {
     public Item(String name, Double price, String extra) {
         this.name = name;
         this.price = price;
-        this.extra = extra;
+        this.extra = Prices.getDomainName(extra);
     }
 
     public String name() {
@@ -39,7 +37,7 @@ public class Item implements Product {
         if (!isRegular()) {
             return name() + "...." + String.format("%.2f", price()) + "$";
         }
-        return name() + " w/ " + extra + "...." + String.format("%.2f", price()) + "$ + " + String.format("%.2f", Prices.getExtras().get(extra)) + "$";
+        return name() + " w/ " + extra + "...." + String.format("%.2f", price()) + "$ + " + String.format("%.2f", Prices.getPrice(this.extra)) + "$";
     }
 
     @Override
